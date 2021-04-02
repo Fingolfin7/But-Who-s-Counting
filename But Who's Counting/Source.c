@@ -5,25 +5,17 @@ int main() {
 	AllInit();
 	U64 playBitBoard = 0ULL;
 
-	playBitBoard |= (1ULL << SQ64(D2));
-	playBitBoard |= (1ULL << SQ64(D3));
-	playBitBoard |= (1ULL << SQ64(D4));
-
-	printf("\n");
-
+	printf("Set square 61: \n");
+	SETBIT(playBitBoard, 61);
 	PrintBitBoard(playBitBoard);
 
-	int count = CNT(playBitBoard);
-
-	printf("Count: %d\n", count);
-
-	int index = POP(&playBitBoard);
-	printf("Index: %d\n", index);
-
+	printf("Set square 24: \n");
+	SETBIT(playBitBoard, 24);
 	PrintBitBoard(playBitBoard);
 
-	count = CNT(playBitBoard);
+	printf("Clear square 61: \n");
+	CLRBIT(playBitBoard, 61);
+	PrintBitBoard(playBitBoard);
 
-	printf("Count: %d\n", count);
 	return 0;
 }
