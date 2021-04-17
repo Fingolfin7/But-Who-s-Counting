@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bitboards.c" />
+    <ClCompile Include="hashkeys.c" />
     <ClCompile Include="init.c" />
     <ClCompile Include="Source.c" />
   </ItemGroup>
