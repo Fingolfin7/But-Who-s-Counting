@@ -1,4 +1,5 @@
 //haskeys.c
+#include "stdio.h"
 #include "Definitions.h"
 
 U64 GeneratePosKey(const S_BOARD* pos) {
@@ -9,7 +10,8 @@ U64 GeneratePosKey(const S_BOARD* pos) {
 	//pieces
 	for (sq = 0; sq < BRD_SQ_NUM; sq++) {
 		piece = pos->pieces[sq];
-		if (piece != NO_SQR && piece != Empty) {
+		if (piece != NO_SQR && piece != Empty && piece != OFFBOARD) {
+			//printf("%d, %d\n", pos->pieces[sq], sq);
 			ASSERT(piece >= wP && piece <= bK);
 			finalKey ^= PieceKeys[piece][sq];
 		}

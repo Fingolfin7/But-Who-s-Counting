@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Bitboards.c" />
     <ClCompile Include="board.c" />
+    <ClCompile Include="data.c" />
     <ClCompile Include="hashkeys.c" />
     <ClCompile Include="init.c" />
     <ClCompile Include="Source.c" />
